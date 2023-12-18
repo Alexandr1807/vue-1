@@ -1,7 +1,16 @@
 <template>
-  <HelloWorld />
+  <div>
+    <div class="main">
+      <!-- <Layout /> -->
+      <!-- <Sidebar /> -->
+      asd
+    </div>
+  </div>
 </template>
 
 <script setup>
-  import HelloWorld from '@/components/HelloWorld.vue'
+
 </script>
+
+<style>
+</style>
