@@ -10,6 +10,7 @@
     "@mdi/font": "7.0.96",
     "@vueuse/core": "^10.7.0",
     "axios": "^1.6.2",
+    "pinia": "^2.1.7",
     "roboto-fontface": "*",
     "unplugin-auto-import": "^0.17.2",
     "vue": "^3.2.0",

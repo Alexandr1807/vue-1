@@ -5,8 +5,8 @@
             v-model:items-per-page="itemsPerPage"
             :headers="headers"
             :items-length="totalItems"
-            :items="users"
-            :loading="loading"
+            :items="store.users"
+            :loading="store.loading"
             :search="search"
             item-value="name"
             @update:options="loadItems"
@@ -28,12 +28,11 @@
 </template>
 
 <script setup>
-import axios from 'axios'
 import router from '@/router';
+import { useUserStore } from '@/stores/UserStore'
 
+const store = useUserStore()
 const model1 = true
-const users = ref([])
-const loading = ref(false)
 const headers = ref([
     {
         title: "ID",
@@ -69,17 +68,6 @@ const headers = ref([
     }
 ])
 
-async function fetchUsers() {
-    try {
-        loading.value = true
-        const response = await axios.get('http://localhost:3000/users')
-        users.value = response.data
-        loading.value = false
-    } catch (error) {
-        
-    }
-}
-
 function handleClick (id) {
     router.push({ path: 'users', name: "UserProfile", params: {id: id}})
 }
@@ -96,13 +84,13 @@ let convertSex = (val) => {
 
 
 onMounted(() => {
-    fetchUsers()
+    store.fill()
 })
 </script>
 
 <style scoped>
 tr:hover {
- background-color: #f7f7f769;
- cursor: pointer;
+  background-color: #f7f7f769;
+  cursor: pointer;
 }
 </style>
