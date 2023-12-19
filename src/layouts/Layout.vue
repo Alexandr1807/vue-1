@@ -4,9 +4,9 @@
 
     <v-navigation-drawer permanent>
         <v-list>
-          <router-link class="text-decoration-none" to="/users"><v-list-item class="text-black" title="Users" value="users"></v-list-item></router-link>
+          <router-link class="text-decoration-none" to="/users"><v-list-item class="text-black" title="Пользователи" value="users"></v-list-item></router-link>
 
-          <router-link class="text-decoration-none" to="/docs"><v-list-item class="text-black" title="Documents" value="documents"></v-list-item></router-link>
+          <router-link class="text-decoration-none" to="/docs"><v-list-item class="text-black" title="Документы" value="documents"></v-list-item></router-link>
 
         </v-list>
     </v-navigation-drawer>

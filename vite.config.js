@@ -2,6 +2,7 @@
 import vue from '@vitejs/plugin-vue'
 import vuetify, { transformAssetUrls } from 'vite-plugin-vuetify'
 import ViteFonts from 'unplugin-fonts/vite'
+import AutoImport from 'unplugin-auto-import/vite'
 
 // Utilities
 import { defineConfig } from 'vite'
@@ -16,6 +17,10 @@ export default defineConfig({
     // https://github.com/vuetifyjs/vuetify-loader/tree/master/packages/vite-plugin#readme
     vuetify({
       autoImport: true,
+    }),
+    AutoImport({
+      imports: ['vue', 'vue-router', '@vueuse/core', '@vueuse/math'],
+      vueTemplate: true,
     }),
     ViteFonts({
       google: {
@@ -42,6 +47,6 @@ export default defineConfig({
     ],
   },
   server: {
-    port: 3000,
+    port: 8080,
   },
 })

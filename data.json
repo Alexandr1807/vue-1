@@ -1,0 +1,60 @@
+{
+    "users": [
+        {
+            "id": 1,
+            "name": "John",
+            "secondName": "Wick",
+            "birthDate": "18.07.1980",
+            "passport": "AB1234567",
+            "sex": 1,
+            "activity": 1
+        },
+        {
+            "id": 2,
+            "name": "John",
+            "secondName": "Wick",
+            "birthDate": "18.07.1980",
+            "passport": "AB1234567",
+            "sex": 2,
+            "activity": 1
+        },
+        {
+            "id": 3,
+            "name": "John",
+            "secondName": "Wick",
+            "birthDate": "18.07.1980",
+            "passport": "AB1234567",
+            "sex": 1,
+            "activity": 1
+        }
+    ],
+    "documents": [
+        {
+            "id": 1,
+            "docType": 1,
+            "number": 234,
+            "date": "13.01.2023",
+            "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eligendi repellendus, quod, tempora maxime ab dicta consectetur nulla, nesciunt repudiandae ratione deleniti! Rem, necessitatibus ducimus maxime dicta in recusandae error voluptatibus.",
+            "type": 2,
+            "person": 0
+        },
+        {
+            "id": 2,
+            "docType": 2,
+            "number": 234,
+            "date": "13.01.2023",
+            "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eligendi repellendus, quod, tempora maxime ab dicta consectetur nulla, nesciunt repudiandae ratione deleniti! Rem, necessitatibus ducimus maxime dicta in recusandae error voluptatibus.",
+            "type": 0,
+            "person": "John Wick"
+        },
+        {
+            "id": 3,
+            "docType": 1,
+            "number": 234,
+            "date": "13.01.2023",
+            "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eligendi repellendus, quod, tempora maxime ab dicta consectetur nulla, nesciunt repudiandae ratione deleniti! Rem, necessitatibus ducimus maxime dicta in recusandae error voluptatibus.",
+            "type": 1,
+            "person": 0
+        }
+    ] 
+}

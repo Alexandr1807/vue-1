@@ -9,22 +9,22 @@ const routes = [
       {
         path: 'users',
         name: 'Users',
-        component: () => import('@/components/UsersList.vue'),
+        component: () => import('@/components/Users/UsersList.vue'),
       },
       {
         path: 'docs',
         name: 'Documents',
-        component: () => import('@/components/DocumentsList.vue'),
+        component: () => import('@/components/Documents/DocumentsList.vue'),
       },
       {
         path: 'users/:id',
-        name: 'User Profile',
-        component: () => import('@/components/UserProfile.vue')
+        name: 'UserProfile',
+        component: () => import('@/components/Users/UserProfile.vue')
       },
       {
         path: 'docs/:id',
         name: 'Document',
-        component: () => import('@/components/Document.vue')
+        component: () => import('@/components/Documents/Document.vue')
       }
     ],
   },
