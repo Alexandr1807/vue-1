@@ -7,7 +7,7 @@
             "birthDate": "18.07.1980",
             "passport": "AB1234567",
             "sex": 1,
-            "activity": 1
+            "activity": 0
         },
         {
             "id": 2,
@@ -16,7 +16,7 @@
             "birthDate": "18.07.1980",
             "passport": "AB1234567",
             "sex": 2,
-            "activity": 1
+            "activity": 0
         },
         {
             "id": 3,

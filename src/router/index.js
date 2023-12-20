@@ -19,12 +19,14 @@ const routes = [
       {
         path: 'users/:id',
         name: 'UserProfile',
-        component: () => import('@/components/Users/UserProfile.vue')
+        component: () => import('@/components/Users/UserProfile.vue'),
+        props: true
       },
       {
         path: 'docs/:id',
         name: 'Document',
-        component: () => import('@/components/Documents/Document.vue')
+        component: () => import('@/components/Documents/Document.vue'),
+        props: true
       }
     ],
   },

@@ -6,6 +6,7 @@ export const useUserStore = defineStore("UserStore", {
         return {
             users: [],
             loading: true,
+            user: {}
         }
     },
     actions: {
@@ -14,6 +15,11 @@ export const useUserStore = defineStore("UserStore", {
         async getUsers() {
             const response = await axios.get('http://localhost:3000/users')
             this.users = response.data
+        },
+
+        async getUser(id) {
+            const response = await axios.get('http://localhost:3000/users/' + id)
+            this.user = response.data
         }
         
     }

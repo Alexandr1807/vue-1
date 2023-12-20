@@ -26,7 +26,7 @@
                     <td style="text-align: start;">{{ user.item.birthDate }}</td>
                     <td style="text-align: start;">{{ user.item.passport }}</td>
                     <td style="text-align: start;">{{ convertSex(user.item.sex) }}</td>
-                    <td style="text-align: start;"><v-checkbox disabled="true"></v-checkbox></td>
+                    <td style="text-align: start;"><v-checkbox disabled="true" :model-value="convertActiv(user.item.activity)"></v-checkbox></td>
                 </tr>
             </template>
 
@@ -43,6 +43,7 @@ let totalItems = ref(0)
 let search = ref('')
 let itemsPerPage = ref(5)
 let name = ref('')
+let model = ref(true)
 
 const store = useUserStore()
 const headers = ref([
@@ -92,7 +93,7 @@ function handleClick (id) {
     router.push({ path: 'users', name: "UserProfile", params: {id: id}})
 }
 
-let convertSex = (val) => {
+function convertSex(val) {
     if (val == 1) {
         return 'Муж'
     } else if (val == 2) {
@@ -101,6 +102,11 @@ let convertSex = (val) => {
         return 'Не указан'
     }
 }
+
+let convertActiv = (val) => {
+   return val === 1 ? true : false
+}
+
 
 const FakeAPI = {
     async fetch ({ page, itemsPerPage, sortBy, search }) {
