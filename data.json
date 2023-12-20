@@ -2,7 +2,7 @@
     "users": [
         {
             "id": 1,
-            "name": "John",
+            "name": "Alex",
             "secondName": "Wick",
             "birthDate": "18.07.1980",
             "passport": "AB1234567",
@@ -25,6 +25,51 @@
             "birthDate": "18.07.1980",
             "passport": "AB1234567",
             "sex": 1,
+            "activity": 1
+        },
+        {
+            "id": 2,
+            "name": "John",
+            "secondName": "Wick",
+            "birthDate": "18.07.1980",
+            "passport": "AB1234567",
+            "sex": 2,
+            "activity": 1
+        },
+        {
+            "id": 2,
+            "name": "John",
+            "secondName": "Wick",
+            "birthDate": "18.07.1980",
+            "passport": "AB1234567",
+            "sex": 2,
+            "activity": 1
+        },
+        {
+            "id": 2,
+            "name": "John",
+            "secondName": "Wick",
+            "birthDate": "18.07.1980",
+            "passport": "AB1234567",
+            "sex": 2,
+            "activity": 1
+        },
+        {
+            "id": 2,
+            "name": "John",
+            "secondName": "Wick",
+            "birthDate": "18.07.1980",
+            "passport": "AB1234567",
+            "sex": 2,
+            "activity": 1
+        },
+        {
+            "id": 2,
+            "name": "John",
+            "secondName": "Wick",
+            "birthDate": "18.07.1980",
+            "passport": "AB1234567",
+            "sex": 2,
             "activity": 1
         }
     ],
