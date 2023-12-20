@@ -28,7 +28,7 @@
             "activity": 1
         },
         {
-            "id": 2,
+            "id": 4,
             "name": "John",
             "secondName": "Wick",
             "birthDate": "18.07.1980",
@@ -37,7 +37,7 @@
             "activity": 1
         },
         {
-            "id": 2,
+            "id": 5,
             "name": "John",
             "secondName": "Wick",
             "birthDate": "18.07.1980",
@@ -46,7 +46,7 @@
             "activity": 1
         },
         {
-            "id": 2,
+            "id": 6,
             "name": "John",
             "secondName": "Wick",
             "birthDate": "18.07.1980",
@@ -55,7 +55,7 @@
             "activity": 1
         },
         {
-            "id": 2,
+            "id": 7,
             "name": "John",
             "secondName": "Wick",
             "birthDate": "18.07.1980",
@@ -64,7 +64,7 @@
             "activity": 1
         },
         {
-            "id": 2,
+            "id": 8,
             "name": "John",
             "secondName": "Wick",
             "birthDate": "18.07.1980",
@@ -94,6 +94,60 @@
         },
         {
             "id": 3,
+            "docType": 1,
+            "number": 234,
+            "date": "13.01.2023",
+            "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eligendi repellendus, quod, tempora maxime ab dicta consectetur nulla, nesciunt repudiandae ratione deleniti! Rem, necessitatibus ducimus maxime dicta in recusandae error voluptatibus.",
+            "type": 1,
+            "person": 0
+        },
+        {
+            "id": 4,
+            "docType": 2,
+            "number": 234,
+            "date": "13.01.2023",
+            "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eligendi repellendus, quod, tempora maxime ab dicta consectetur nulla, nesciunt repudiandae ratione deleniti! Rem, necessitatibus ducimus maxime dicta in recusandae error voluptatibus.",
+            "type": 0,
+            "person": "John Wick"
+        },
+        {
+            "id": 5,
+            "docType": 1,
+            "number": 234,
+            "date": "13.01.2023",
+            "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eligendi repellendus, quod, tempora maxime ab dicta consectetur nulla, nesciunt repudiandae ratione deleniti! Rem, necessitatibus ducimus maxime dicta in recusandae error voluptatibus.",
+            "type": 1,
+            "person": 0
+        },
+        {
+            "id": 6,
+            "docType": 2,
+            "number": 234,
+            "date": "13.01.2023",
+            "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eligendi repellendus, quod, tempora maxime ab dicta consectetur nulla, nesciunt repudiandae ratione deleniti! Rem, necessitatibus ducimus maxime dicta in recusandae error voluptatibus.",
+            "type": 0,
+            "person": "John Wick"
+        },
+        {
+            "id": 7,
+            "docType": 1,
+            "number": 234,
+            "date": "13.01.2023",
+            "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eligendi repellendus, quod, tempora maxime ab dicta consectetur nulla, nesciunt repudiandae ratione deleniti! Rem, necessitatibus ducimus maxime dicta in recusandae error voluptatibus.",
+            "type": 1,
+            "person": 0
+        },
+        {
+            "id": 8,
+            "docType": 2,
+            "number": 234,
+            "date": "13.01.2023",
+            "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eligendi repellendus, quod, tempora maxime ab dicta consectetur nulla, nesciunt repudiandae ratione deleniti! Rem, necessitatibus ducimus maxime dicta in recusandae error voluptatibus.",
+            "type": 0,
+            "person": "John Wick"
+        },
+        {
+            "id": 9,
             "docType": 1,
             "number": 234,
             "date": "13.01.2023",

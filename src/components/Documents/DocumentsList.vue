@@ -5,12 +5,19 @@
             v-model:items-per-page="itemsPerPage"
             :headers="headers"
             :items-length="totalItems"
-            :items="documents"
-            :loading="loading"
+            :items="serverItems"
+            :loading="store.loading"
             :search="search"
             item-value="name"
             @update:options="loadItems"
         >
+            <template v-slot:tfoot>
+                <tr>
+                    <td>
+                        <v-text-field v-model="name" hide-details placeholder="Сотрудник" class="ma-2" density="compact"></v-text-field>
+                    </td>
+                </tr>
+            </template>
             <template v-slot:item="doc">
                 <tr @click.stop="handleClick(doc.item.id)">
                     <td>{{ convertDocType(doc.item.docType) }}</td>
@@ -26,11 +33,17 @@
 </template>
 
 <script setup>
-import axios from 'axios'
 import router from '@/router';
+import {useDocumentStore} from '@/stores/DocumentStore'
 
-const documents = ref([])
-const loading = ref(false)
+const store = useDocumentStore()
+
+let serverItems = ref([])
+let totalItems = ref(0)
+let search = ref('')
+let itemsPerPage = ref(5)
+let name = ref('')
+
 const headers = ref([
     {
         title: "Тип",
@@ -62,17 +75,6 @@ const headers = ref([
     }
 ])
 
-async function fetchDocuments() {
-    try {
-        loading.value = true
-        const response = await axios.get('http://127.0.0.1:3000/documents')
-        documents.value = response.data
-        loading.value = false
-    } catch (error) {
-        
-    }
-}
-
 function handleClick (id) {
     router.push({ path: 'docs', name: "Document", params: {id: id}})
 }
@@ -103,8 +105,54 @@ let convertPerson = (val) => {
     return val === 0 ? '-' : val
 }
 
+const FakeAPI = {
+    async fetch ({ page, itemsPerPage, sortBy, search }) {
+        return new Promise(resolve => {
+        setTimeout(() => {
+            const start = (page - 1) * itemsPerPage
+            const end = start + itemsPerPage
+            const items = store.documents.slice().filter(item => {
+                if (search.name && !item.name.toLowerCase().includes(search.name.toLowerCase())) {
+                    return false
+                }
+
+                return true
+            })
+
+            if (sortBy.length) {
+                const sortKey = sortBy[0].key
+                const sortOrder = sortBy[0].order
+                items.sort((a, b) => {
+                    const aValue = a[sortKey]
+                    const bValue = b[sortKey]
+                    return sortOrder === 'desc' ? bValue - aValue : aValue - bValue
+                })
+            }
+
+            const paginated = items.slice(start, end)
+
+            resolve({ items: paginated, total: items.length })
+        }, 500)
+        })
+    },
+}
+
+watch(name, () => {
+    search.value = String(Date.now())
+})
+    
+function loadItems({ page, itemsPerPage, sortBy }) {
+    store.loading = true
+    FakeAPI.fetch({ page, itemsPerPage, sortBy, search: { name: name.value } }).then(({ items, total }) => {
+        serverItems = items
+        totalItems = total
+        store.loading = false
+    })
+}
+
+
 onMounted(() => {
-    fetchDocuments()
+    store.getDocuments()
 })
 </script>
 <style>
